@@ -23,3 +23,4 @@ function register_theme_menus()
         'primary-menu' => __('Primary Menu'),
     ));
 }
+add_action('init', 'register_theme_menus');
