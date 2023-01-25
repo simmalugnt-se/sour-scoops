@@ -8,5 +8,5 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class("bg-pink-200"); ?>>
     <?php wp_body_open(); ?>
