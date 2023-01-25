@@ -24,3 +24,20 @@ function register_theme_menus()
     ));
 }
 add_action('init', 'register_theme_menus');
+
+// Register Custom Post Type "Ice Cream"
+// https://developer.wordpress.org/themes/functionality/custom-post-types/
+function create_post_type()
+{
+    register_post_type('ice-cream', array(
+        'labels' => array(
+            'name' => __('Ice Cream'),
+            'singular_name' => __('Ice Cream'),
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'ice-cream'),
+        'menu_icon' => 'dashicons-smiley'
+    ));
+}
+add_action('init', 'create_post_type');
