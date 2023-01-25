@@ -4,7 +4,13 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script type="importmap">
+        {
+        "imports": {
+          "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@0.9.198/build/runtime.js"
+        }
+      }
+    </script>
     <?php wp_head(); ?>
 </head>
 
