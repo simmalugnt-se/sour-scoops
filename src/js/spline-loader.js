@@ -7,7 +7,6 @@
 import { Application } from "@splinetool/runtime";
 
 document.querySelectorAll("[data-spline]").forEach((canvas) => {
-  const app = new Application(canvas);
-  app.load(canvas.getAttribute("data-spline"));
+  new Application(canvas).load(canvas.getAttribute("data-spline"));
   canvas.removeAttribute("data-spline");
 });
