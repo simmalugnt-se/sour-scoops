@@ -1,5 +1,4 @@
 <?php
-$id = $args['id'] ?: 'copy';
 $images = [
     "https://prod.spline.design/4UEHB9Sh1rGUkvXW/scene.splinecode",
     "https://prod.spline.design/C3Gfwb38TTg9Ucgb/scene.splinecode",
