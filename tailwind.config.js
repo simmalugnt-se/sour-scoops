@@ -3,6 +3,8 @@ tailwind.config = {
     extend: {
       fontFamily: {
         oi: ["Oi", "cursive"],
+        sans: ["DM Sans", "sans-serif"],
+        mono: ["DM Mono", "monospace"],
       },
       colors: {
         "pink-light": "#F1E8E1",

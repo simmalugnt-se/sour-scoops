@@ -14,7 +14,7 @@
     <?php wp_head(); ?>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans:wght@500&family=Oi&display=swap" rel="stylesheet">
 </head>
 
 <body <?php body_class("bg-pink-light text-brown"); ?>>
@@ -22,9 +22,6 @@
     <?php $menuItems = wp_get_nav_menu_items('primary-menu'); ?>
 
     <nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
-        <div class="mb-2 sm:mb-0">
-            <a href="<?= site_url(); ?>" title="Home" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"><?php bloginfo('name'); ?></a>
-        </div>
         <div>
             <?php $currentPageId = get_queried_object_id();
             if ($menuItems) foreach ($menuItems as $item) : ?>
@@ -32,5 +29,11 @@
                     <?= $item->title; ?>
                 </a>
             <?php endforeach; ?>
+        </div>
+        <div class="mb-2 sm:mb-0">
+            <a href="<?= site_url(); ?>" title="Home" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"><?php bloginfo('name'); ?></a>
+        </div>
+        <div>
+            <span>Get one now</span>
         </div>
     </nav>
