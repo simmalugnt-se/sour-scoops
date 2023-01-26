@@ -9,6 +9,14 @@ function load_tailwind()
 }
 add_action('wp_enqueue_scripts', 'load_tailwind');
 
+function editor_enqueue()
+{
+    wp_enqueue_script('tailwind', 'https://cdn.tailwindcss.com', array(), null, false);
+    // Load tailwind.config.js after tailwind has been loaded
+    wp_enqueue_script('tailwind-config', get_template_directory_uri() . '/tailwind.config.js', array('tailwind'), null, false);
+}
+add_action('enqueue_block_editor_assets', 'editor_enqueue');
+
 // Register Vue for import from CDN
 function register_theme_scripts()
 {
@@ -16,10 +24,12 @@ function register_theme_scripts()
 }
 add_action('wp_enqueue_scripts', 'register_theme_scripts');
 
-// Register support for title-tag and theme menu
+// Register theme support
 add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
     add_theme_support('menus');
+    add_theme_support('wp-block-styles');
+    add_editor_style('editor-style.css');
 });
 
 // Register theme menu(s)
@@ -65,3 +75,9 @@ function create_vendor_post_type()
     ));
 }
 add_action('init', 'create_vendor_post_type');
+
+function register_acf_blocks()
+{
+    register_block_type(__DIR__ . '/blocks/testimonial');
+}
+add_action('init', 'register_acf_blocks');

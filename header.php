@@ -12,9 +12,12 @@
       }
     </script>
     <?php wp_head(); ?>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
 </head>
 
-<body <?php body_class("bg-pink-200"); ?>>
+<body <?php body_class("bg-pink-light text-brown"); ?>>
     <?php wp_body_open(); ?>
     <?php $menuItems = wp_get_nav_menu_items('primary-menu'); ?>
 
