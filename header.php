@@ -4,11 +4,20 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script type="importmap">
+        {
+        "imports": {
+          "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@0.9.198/build/runtime.js"
+        }
+      }
+    </script>
     <?php wp_head(); ?>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
 </head>
 
-<body <?php body_class("bg-pink-200"); ?>>
+<body <?php body_class("bg-pink-light text-brown"); ?>>
     <?php wp_body_open(); ?>
     <?php $menuItems = wp_get_nav_menu_items('primary-menu'); ?>
 

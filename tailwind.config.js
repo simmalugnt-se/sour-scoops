@@ -1,8 +1,12 @@
 tailwind.config = {
   theme: {
     extend: {
+      fontFamily: {
+        oi: ["Oi", "cursive"],
+      },
       colors: {
-        clifford: "#da373d",
+        "pink-light": "#F1E8E1",
+        brown: "#362117",
       },
     },
   },
