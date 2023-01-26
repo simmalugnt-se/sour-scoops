@@ -12,6 +12,9 @@
       }
     </script>
     <?php wp_head(); ?>
+    <!-- Remove this when import maps will be widely supported -->
+    <script async src=" https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <script type="module" src="<?= get_template_directory_uri(); ?>/src/js/spline-loader.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=DM+Sans:wght@500&family=Oi&display=swap" rel="stylesheet">
