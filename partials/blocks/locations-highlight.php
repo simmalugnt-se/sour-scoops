@@ -5,7 +5,7 @@
     <div class="col-span-full lg:col-span-10 lg:col-start-2">
         <div class="flex gap-4 items-center mb-6">
             <div class="flex-grow border-b border-brown h-0"></div>
-            <div>Logo</div>
+            <img src="<?= get_template_directory_uri(); ?>/src/images/sour-scoops-logo.svg" />
             <div class="flex-grow border-b border-brown h-0"></div>
         </div>
         <div class="grid lg:grid-cols-2 items-center mb-6 items-center">
