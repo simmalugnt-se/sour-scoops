@@ -3,7 +3,7 @@
 <div class="w-full bg-white">
     <div style="background-image: url(<?= get_template_directory_uri(); ?>/src/images/icemelt.svg);" class="w-full bg-contain bg-repeat-x h-24">
     </div>
-    <div class="max-w-7xl mx-auto col-span-1 grid grid-cols-12 gap-y-10 gap-x-8 font-mono py-8">
+    <div class="max-w-7xl mx-auto px-8 col-span-1 grid grid-cols-12 gap-y-10 gap-x-8 font-mono py-8">
         <div class="col-span-6">
             <img src="<?= get_template_directory_uri(); ?>/src/images/sour-scoops-logo.svg" />
         </div>

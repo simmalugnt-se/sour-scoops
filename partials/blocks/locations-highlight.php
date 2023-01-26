@@ -1,11 +1,13 @@
 <?php
 ?>
 
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-4 py-20 max-w-7xl mx-auto bg-pink-dark">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-4 px-8 py-20 max-w-7xl mx-auto bg-pink-dark">
     <div class="col-span-full lg:col-span-10 lg:col-start-2">
         <div class="flex gap-4 items-center mb-6">
             <div class="flex-grow border-b border-brown h-0"></div>
-            <div>Logo</div>
+            <div class="p-6 flex items-center justify-center">
+                <img class="h-16 w-auto" src="<?= get_template_directory_uri(); ?>/src/images/sour-scoops-logo.svg" />
+            </div>
             <div class="flex-grow border-b border-brown h-0"></div>
         </div>
         <div class="grid lg:grid-cols-2 items-center mb-6 items-center">

@@ -17,9 +17,6 @@ tailwind.config = {
         beige: "#F1E8E1",
         "blue-dark": "#9CC2FF",
       },
-      backgroundImage: {
-        "footer-texture": "url('/src/images/icmelt.svg')",
-      },
     },
   },
 };

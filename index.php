@@ -5,16 +5,20 @@
 <?php get_template_part('partials/blocks/copy', 'copy', array('title' => "Welcome to Sour Scoops, where unique and daring flavors reign supreme", "bg" => "blue-200")); ?>
 <?php get_template_part('partials/blocks/bestseller-grid', 'bestseller-grid', array('title' => "Bestsellers")); ?>
 <?php get_template_part('partials/blocks/locations-highlight', 'locations-highlight', array('title' => "Bestsellers")); ?>
-<?php if (have_posts()) : ?>
 
-    <?php while (have_posts()) : the_post(); ?>
+<div class="max-w-7xl mx-auto px-8">
+    <?php if (have_posts()) : ?>
 
-        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <?php while (have_posts()) : the_post(); ?>
 
-        <?php the_excerpt(); ?>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-    <?php endwhile; ?>
+            <?php the_excerpt(); ?>
 
-<?php endif; ?>
+        <?php endwhile; ?>
+
+    <?php endif; ?>
+</div>
+
 
 <?php get_footer(); ?>
