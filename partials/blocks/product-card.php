@@ -10,7 +10,7 @@ $randomImage = $images[array_rand($images)];
 ?>
 
 <div class="flex flex-col gap-6">
-    <div class="rounded-xl border border-brown overflow-hidden aspect-square">
+    <div class="rounded-xl border border-brown overflow-hidden aspect-square bg-white">
         <canvas class="w-full h-full" data-spline="<?= $randomImage; ?>"></canvas>
     </div>
     <div class="rounded-xl bg-blue py-4 border border-brown">
