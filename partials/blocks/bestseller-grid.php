@@ -10,7 +10,7 @@ $title = $args['title'] ?: 'Bestsellers';
     <?php
     // Repeat a function 4 times
     for ($i = 0; $i < 4; $i++) :
-        get_template_part('partials/blocks/product-card', 'product-card', array('title' => "Bestsellers", 'id' => "icecream-$i"));
+        get_template_part('partials/blocks/product-card', 'product-card', array());
     endfor;
     ?>
 </div>

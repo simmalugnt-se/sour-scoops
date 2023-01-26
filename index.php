@@ -1,24 +1,13 @@
 <?php get_header(); ?>
 
 
-<?php get_template_part('partials/blocks/hero', 'hero', array('title' => "Icecreams so sour, they'll make your lips pucker")); ?>
-<?php get_template_part('partials/blocks/copy', 'copy', array('title' => "Welcome to Sour Scoops, where unique and daring flavors reign supreme", "bg" => "blue-200")); ?>
-<?php get_template_part('partials/blocks/bestseller-grid', 'bestseller-grid', array('title' => "Bestsellers")); ?>
-<?php get_template_part('partials/blocks/locations-highlight', 'locations-highlight', array('title' => "Bestsellers")); ?>
-
-<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-2 gap-4 py-20 max-w-7xl mx-auto">
     <?php if (have_posts()) : ?>
 
         <?php while (have_posts()) : the_post(); ?>
-
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
-            <?php the_excerpt(); ?>
-
+            <?php get_template_part('partials/blocks/post-card', 'post-card', array()); ?>
         <?php endwhile; ?>
 
     <?php endif; ?>
 </div>
-
-
 <?php get_footer(); ?>
