@@ -10,7 +10,7 @@
         </div>
         <div class="grid lg:grid-cols-2 items-center mb-6 items-center">
             <div>
-                <h2 class="text-4xl lg:text-6xl font-oi mb-6">Available at <span class="text-blue-500">900</span> locations near you!</h2>
+                <h2 class="text-4xl lg:text-6xl font-oi mb-6">Available at <span class="text-blue-dark">900</span> locations near you!</h2>
                 <p>Find your local retailer that sells our products.</p>
             </div>
             <div class="flex flex-col items-center">

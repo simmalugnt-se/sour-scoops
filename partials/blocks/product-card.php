@@ -14,7 +14,7 @@ $randomImage = $images[array_rand($images)];
     <div class="rounded-xl border border-brown overflow-hidden aspect-square">
         <canvas class="w-full h-full" data-spline="<?= $randomImage; ?>"></canvas>
     </div>
-    <div class="rounded-xl bg-blue-200 py-4 border border-brown">
+    <div class="rounded-xl bg-blue py-4 border border-brown">
         <h3 class="text-3xl lg:text-4xl font-oi mb-12 px-5">Ice</h3>
         <a class="block border-t border-brown px-5 pt-3" href="">Read more 👉</a>
     </div>
