@@ -10,10 +10,10 @@
             </div>
             <div class="flex-grow border-b border-brown h-0"></div>
         </div>
-        <div class="grid lg:grid-cols-2 items-center mb-6 items-center">
+        <div class="grid lg:grid-cols-2 gap-y-8 items-center mb-6 items-center">
             <div>
-                <h2 class="text-4xl lg:text-6xl font-oi mb-6">Available at <span class="text-blue-dark">900</span> locations near you!</h2>
-                <p>Find your local retailer that sells our products.</p>
+                <h2 class="text-4xl lg:text-6xl font-oi mb-6 text-center lg:text-left">Available at <span class="text-blue-dark">900</span> locations near you!</h2>
+                <p class="text-center lg:text-left">Find your local retailer that sells our products.</p>
             </div>
             <div class="flex flex-col items-center">
                 <img src="<?= get_template_directory_uri(); ?>/src/images/map-marker.svg" />

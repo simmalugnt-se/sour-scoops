@@ -24,7 +24,7 @@
     <?php wp_body_open(); ?>
     <?php $menuItems = wp_get_nav_menu_items('primary-menu'); ?>
 
-    <nav class="font-mono border-b-2 border-brown text-lg px-8 absolute top-0 left-0 w-full">
+    <nav class="font-mono border-b-2 border-brown text-lg px-8">
         <div class="max-w-7xl mx-auto grid grid-cols-12">
             <div class="col-span-5 py-5 flex gap-10 items-center">
                 <?php $currentPageId = get_queried_object_id();

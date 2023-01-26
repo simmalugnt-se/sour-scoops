@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<div class="grid grid-cols-2 gap-4 py-20 max-w-7xl mx-auto">
+<div class="grid grid-cols-2 gap-4 p-8 max-w-7xl mx-auto">
     <?php if (have_posts()) : ?>
 
         <?php while (have_posts()) : the_post(); ?>
