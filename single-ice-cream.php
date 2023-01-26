@@ -19,7 +19,6 @@
     </div>
 </div>
 <?php get_template_part('partials/blocks/copy', 'copy', array('title' => "This flavor is not for the faint of heart", "bg" => "blue")); ?>
-<?php get_template_part('partials/blocks/testimonial', 'testimonial', array('title' => "This flavor is not for the faint of heart", "bg" => "beige")); ?>
 <?php get_template_part('partials/blocks/bestseller-grid', 'bestseller-grid', array('title' => "Similar goodies")); ?>
 
 <?php get_footer(); ?>
