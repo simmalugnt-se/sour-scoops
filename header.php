@@ -21,19 +21,20 @@
     <?php wp_body_open(); ?>
     <?php $menuItems = wp_get_nav_menu_items('primary-menu'); ?>
 
-    <nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline w-full">
-        <div>
+    <nav class="font-mono grid grid-cols-12 border-b-2 border-brown text-lg">
+        <div class="col-span-5 py-5 flex gap-10 items-center">
             <?php $currentPageId = get_queried_object_id();
             if ($menuItems) foreach ($menuItems as $item) : ?>
-                <a title="<?= $item->title; ?>" class="hover:text-pink-500 px-3 py-2 <?= $currentPageId == $item->object_id ? 'text-pink-500' : 'text-gray-400' ?> >" href="<?= $item->url; ?>">
+                <a title="<?= $item->title; ?>" class="<?= $currentPageId == $item->object_id ? 'text-brown' : 'text-brown' ?> >" href="<?= $item->url; ?>">
                     <?= $item->title; ?>
                 </a>
             <?php endforeach; ?>
         </div>
-        <div class="mb-2 sm:mb-0">
-            <a href="<?= site_url(); ?>" title="Home" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"><?php bloginfo('name'); ?></a>
+        <div class="col-span-2 flex justify-center items-center py-3">
+            <a href="<?= site_url(); ?>"><img class="h-16 w-auto" src="<?= get_template_directory_uri(); ?>/src/images/sour-scoops-logo.svg" />
+            </a>
         </div>
-        <div>
-            <span>Get one now</span>
+        <div class="col-span-5 flex justify-end items-center py-5">
+            <span>Get one now 👉</span>
         </div>
     </nav>
