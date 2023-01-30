@@ -3,13 +3,9 @@
 
 <?php if (have_posts()) : ?>
 
-    <?php while (have_posts()) : the_post(); ?>
-        <pre>
-            <code>
-                <?php print_r($post()); ?>
-            </code>
-        </pre>
-    <?php endwhile; ?>
+    <?php while (have_posts()) : the_post();
+        print_a($post);
+    endwhile; ?>
 
 <?php endif; ?>
 
