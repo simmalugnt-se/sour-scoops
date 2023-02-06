@@ -35,7 +35,3 @@ $current_page_id = get_queried_object_id();
             </div>
         </div>
     </nav>
-
-    <?php
-    print_a($primary_menu);
-    ?>
