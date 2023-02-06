@@ -7,7 +7,7 @@
         ?>
             <div class="flex flex-col gap-6">
                 <div class="rounded-xl border border-brown overflow-hidden h-96 relative">
-                    <img src="<?= get_template_directory_uri(); ?>/resources/icecream.png" class="object-cover w-full h-full" />
+                    <?php the_post_thumbnail('large', array('class' => 'object-cover w-full h-full')); ?>
                     <date class="absolute left-6 bottom-6 bg-white p-2 border border-brown rounded-lg"><?php echo get_the_date(); ?></date>
                 </div>
                 <div class="rounded-xl bg-blue py-4 border border-brown">
@@ -19,7 +19,7 @@
         <div class="col-span-full flex justify-between">
             <!-- Start the pagination functions after the loop. -->
             <div>
-                <?php previous_posts_link('👈 Newer posts'); ?>
+                <?php previous_posts_link('Newer posts'); ?>
             </div>
             <div>
                 <?php next_posts_link('Older posts 👉'); ?>
