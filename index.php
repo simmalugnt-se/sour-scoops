@@ -16,6 +16,16 @@
                 </div>
             </div>
         <?php endwhile; ?>
+        <div class="col-span-full flex justify-between">
+            <!-- Start the pagination functions after the loop. -->
+            <div>
+                <?php previous_posts_link('👈 Newer posts'); ?>
+            </div>
+            <div>
+                <?php next_posts_link('Older posts 👉'); ?>
+            </div>
+            <!-- End the pagination functions after the loop. -->
+        </div>
     </div>
 <?php endif; ?>
 
