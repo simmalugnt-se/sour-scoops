@@ -17,19 +17,10 @@ function editor_enqueue()
 }
 add_action('enqueue_block_editor_assets', 'editor_enqueue');
 
-// Register Vue for import from CDN
-function register_theme_scripts()
-{
-    wp_register_script('vue', 'https://cdn.jsdelivr.net/npm/vue@2.7.14', array(), null, false);
-}
-add_action('wp_enqueue_scripts', 'register_theme_scripts');
-
 // Register theme support
 add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
     add_theme_support('menus');
-    add_theme_support('wp-block-styles');
-    add_editor_style('editor-style.css');
 });
 
 // Register theme menu(s)
@@ -38,6 +29,8 @@ function register_theme_menus()
 {
     register_nav_menus(array(
         'primary-menu' => __('Primary Menu'),
+        'secondary-menu' => __('Secondary Menu'),
+        'footer-menu' => __('Footer Menu'),
     ));
 }
 add_action('init', 'register_theme_menus');
@@ -59,25 +52,9 @@ function create_post_type()
 }
 add_action('init', 'create_post_type');
 
-// Register Custom Post Type "Vendor"
-// https://developer.wordpress.org/reference/functions/register_post_type/
-function create_vendor_post_type()
+function print_a($data)
 {
-    register_post_type('vendor', array(
-        'labels' => array(
-            'name' => __('Vendors'),
-            'singular_name' => __('Vendor')
-        ),
-        'publicly_queryable' => true,
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'vendors'),
-        'menu_icon' => 'dashicons-store',
-    ));
+?>
+    <pre class="block p-6 m-6 border border-brown rounded-xl text-xs overflow-hidden"><code><?php print_r($data); ?></code></pre>
+<?php
 }
-add_action('init', 'create_vendor_post_type');
-
-function register_acf_blocks()
-{
-    register_block_type(__DIR__ . '/blocks/testimonial');
-}
-add_action('init', 'register_acf_blocks');
