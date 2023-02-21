@@ -1,13 +1,13 @@
 {
-  "name": "acf/testimonial",
-  "title": "Testimonial",
-  "description": "A custom testimonial block.",
+  "name": "acf/hero",
+  "title": "Hero",
+  "description": "A custom hero block.",
   "category": "formatting",
   "icon": "admin-comments",
-  "keywords": ["testimonial", "quote"],
+  "keywords": ["hero"],
   "acf": {
     "mode": "preview",
-    "renderTemplate": "testimonial.php"
+    "renderTemplate": "hero.php"
   },
   "align": "full"
 }

@@ -78,6 +78,6 @@ add_action('init', 'create_vendor_post_type');
 
 function register_acf_blocks()
 {
-    register_block_type(__DIR__ . '/blocks/testimonial');
+    register_block_type(__DIR__ . '/blocks/hero');
 }
 add_action('init', 'register_acf_blocks');
